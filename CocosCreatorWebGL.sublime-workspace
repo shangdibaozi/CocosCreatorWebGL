@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_render",
+				"_renderCmd"
+			],
+			[
 				"ori",
 				"originZOrder"
 			],
@@ -1027,6 +1031,21 @@
 	},
 	"file_history":
 	[
+		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirector.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirectorWebGL.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle_LINE_LOOP.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle_LINE_STRIP.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle_LINES.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/MultiPoint.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/RotatedTriangle.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/RotatedTriangle_Matrix.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/ScaledTriangle_Matrix.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/TranslatedTriangle.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/lib/cuon-matrix.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloQuad.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloQuad_FAN.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLProgram.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/02/HelloPoint2.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/02/HelloPoint1.js",
@@ -1041,12 +1060,9 @@
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeBaseRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNode.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeWebGLRenderCmd.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
 		"/D/CocosCreator/resources/engine/cocos2d/clipping-nodes/CCClippingNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/gulp/tasks/test.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shape-nodes/CCDrawNodeWebGLRenderCmd.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirectorWebGL.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirector.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/components/CCSprite.js",
 		"/D/CocosCreator/resources/engine/bin/cocos2d-js-for-preview.js",
 		"/D/CocosCreator/resources/engine/bin/cocos2d-js-for-preview.js.map",
@@ -1142,19 +1158,7 @@
 		"/E/cocos2d-x-3.14.1/plugin/samples/HelloPlugins/proj.android/build_native.py",
 		"/H/game-programmer/0.编程学前班/scratch/Scratch2StarterProjects/Games/Pong Starter.sb2",
 		"/E/cocos/Rocker/frameworks/cocos2d-x/cocos/scripting/js-bindings/script/jsb_prepare.js",
-		"/E/code/python/gmlog/log.js",
-		"/E/code/python/gmlog/LogMgr.py",
-		"/E/code/python/gmlog/gmlogs/103/11.GM-iMail.2017-03-25.log",
-		"/E/formoney/cocos2d cpp samples/genius-x-develop/genius-x/genius/ECS/Com.h",
-		"/E/formoney/cocos2d cpp samples/genius-x-develop/genius-x/genius/ECS/Common/Components/NodeCom.h",
-		"/E/formoney/cocos2d cpp samples/genius-x-develop/Resources/test/21.png",
-		"/E/formoney/cocos2d cpp samples/genius-x-develop/Resources/test/20.png",
-		"/H/serverEngine/kbengine_cocos2d_js_demo-master/cocos2d-js-client/frameworks/js-bindings/cocos2d-x/external/tinyxml2/tinyxml2.cpp",
-		"/H/cocos/JSDemo/res/snow.plist",
-		"/H/cocos/JSDemo/frameworks/cocos2d-html5/cocos2d/particle/CCParticleSystem.js",
-		"/H/cocos/particle/NewParticle/Plist/NewParticle_1.plist",
-		"/H/cocos/JSDemo/frameworks/cocos2d-html5/cocos2d/actions/CCAction.js",
-		"/H/cocos/JSDemo/frameworks/cocos2d-html5/cocos2d/actions/CCActionInstant.js"
+		"/E/code/python/gmlog/log.js"
 	],
 	"find":
 	{
@@ -1173,6 +1177,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Vector4",
+			"loop",
+			"_vertexDataUI32",
+			"bindBuffer(gl.ARRAY_BUFFER, null)",
 			"sourceProgram",
 			"_renderContext",
 			"webglContext",
@@ -1296,11 +1304,7 @@
 			"30",
 			"PI",
 			"R *",
-			"R",
-			"R *",
-			"R",
-			"r2d",
-			"d2r"
+			"R"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1332,11 +1336,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1379,6 +1390,14 @@
 		"selected_items":
 		[
 			[
+				"dire",
+				"engine\\cocos2d\\core\\CCDirectorWebGL.js"
+			],
+			[
+				"director",
+				"engine\\cocos2d\\core\\CCDirector.js"
+			],
+			[
 				"renderwe",
 				"engine\\cocos2d\\core\\renderer\\RendererWebGL.js"
 			],
@@ -1417,10 +1436,6 @@
 			[
 				"ccdire",
 				"engine\\cocos2d\\core\\CCDirector.js"
-			],
-			[
-				"director",
-				"engine\\cocos2d\\core\\CCDirectorWebGL.js"
 			],
 			[
 				"ccglp",
@@ -1750,7 +1765,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 211.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
