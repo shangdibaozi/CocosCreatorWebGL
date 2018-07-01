@@ -1,8 +1,12 @@
 var VSHADER_SOURCE = 
 `
 attribute vec4 a_Position;
+uniform float u_CosB, u_SinB;
 void main() {
-    gl_Position = a_Position;
+    gl_Position.x = a_Position.x * u_CosB - a_Position.y * u_SinB;
+    gl_Position.y = a_Position.x * u_SinB + a_Position.y * u_CosB;
+    gl_Position.z = a_Position.z;
+    gl_Position.w = 1.0;
 }
 `;
 
@@ -12,6 +16,10 @@ void main() {
     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }
 `;
+
+// The rotation angle
+var ANGLE = 90.0;
+
 cc.Class({
     extends: cc.Component,
 
@@ -33,35 +41,45 @@ cc.Class({
         program.initWithVertexShaderByteArray(VSHADER_SOURCE, FSHADER_SOURCE);
         program.link();
         sgNode.setShaderProgram(program);
+        program.use(); // WebGL: INVALID_OPERATION: uniform1f: location not for current program
 
-        var n = this.initVertexBuffers(gl, program._programObj);
+        // Create a buffer object
+        var vertexBuffer = gl.createBuffer();
+        var n = this.initVertexBuffers(gl, vertexBuffer, program._programObj);
         if(n < 0) {
-            cc.error('Failed to set the position of the vertices');
+            cc.error('Failed to set the positions of the vertices');
             return;
         }
 
+        // Pass the data required to rotate the shape to the vertex shader
+        var radian = Math.PI * ANGLE / 180.0; // Convert to radians
+        var cosB = Math.cos(radian);
+        var sinB = Math.sin(radian);
+
+        var u_CosB = gl.getUniformLocation(program._programObj, 'u_CosB');
+        var u_SinB = gl.getUniformLocation(program._programObj, 'u_SinB');
+        if(!u_CosB || !u_SinB) {
+            cc.error('Failed to get the storate location of u_CosB or u_SinB');
+            return;
+        }
+        gl.uniform1f(u_CosB, cosB);
+        gl.uniform1f(u_SinB, sinB);
+
         sgNode._renderCmd.rendering = function() {
             program.use();
-            gl.drawArrays(gl.TRIANGLE_FAN, 0, n);
+            gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+            gl.drawArrays(gl.TRIANGLES, 0, n);
             cc.incrementGLDraws(1);
         };
     },
 
-    initVertexBuffers : function(gl, program) {
+    initVertexBuffers : function(gl, vertexBuffer, program) {
         var vertices = new Float32Array([
-            -0.5, 0.5,
-            -0.5, -0.5,
-            0.5, 0.5,
-            0.5, -0.5
+                0, 0.5,
+                -0.5, -0.5,
+                0.5, -0.5
             ]);
-        var n = 4; // The number of vertices
-
-        // create a buffer object
-        var vertexBuffer = gl.createBuffer();
-        if(!vertexBuffer) {
-            cc.error('Failed to create the buffer object');
-            return -1;
-        }
+        var n = 3; // The number of vertices
 
         // Bind the buffer object to target
         gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);

@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"file_exclude_patterns" : ["*.meta"],
+			"folder_exclude_patterns" : [".git", ".github", "library", "local", "packages", "settings", "temp", "build"]
+		},
+		{
+			"path": "D:\\CocosCreator\\resources\\engine",
+			"file_exclude_patterns" : ["*.meta"],
+			"folder_exclude_patterns" : [".git", ".github", "jsb"]
+		},
+	]
+}

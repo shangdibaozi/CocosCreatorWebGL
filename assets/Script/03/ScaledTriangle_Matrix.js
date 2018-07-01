@@ -1,8 +1,9 @@
 var VSHADER_SOURCE = 
 `
 attribute vec4 a_Position;
+uniform mat4 u_xformMatrix;
 void main() {
-    gl_Position = a_Position;
+    gl_Position = u_xformMatrix * a_Position;
 }
 `;
 
@@ -12,6 +13,12 @@ void main() {
     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }
 `;
+
+// The scaling factor
+var Sx = 1.0;
+var Sy = 1.8;
+var Sz = 1.0;
+
 cc.Class({
     extends: cc.Component,
 
@@ -33,35 +40,46 @@ cc.Class({
         program.initWithVertexShaderByteArray(VSHADER_SOURCE, FSHADER_SOURCE);
         program.link();
         sgNode.setShaderProgram(program);
+        program.use(); // WebGL: INVALID_OPERATION: uniform1f: location not for current program
 
-        var n = this.initVertexBuffers(gl, program._programObj);
+        // Create a buffer object
+        var vertexBuffer = gl.createBuffer();
+        var n = this.initVertexBuffers(gl, vertexBuffer, program._programObj);
         if(n < 0) {
-            cc.error('Failed to set the position of the vertices');
+            cc.error('Failed to set the positions of the vertices');
             return;
         }
 
+        // Note: WebGL is column major order
+        var xformMatrix = new Float32Array([
+            Sx, 0.0, 0.0, 0.0,
+            0.0, Sy, 0.0, 0.0,
+            0.0, 0.0, Sz, 0.0,
+            0.0, 0.0, 0.0, 1.0
+            ]);
+        // Pass the scaling matrix to the vertex shader
+        var u_xformMatrix = gl.getUniformLocation(program._programObj, 'u_xformMatrix');
+        if(!u_xformMatrix) {
+            cc.error('Failed to get the storage location of u_xformMatrix');
+            return;
+        }
+        gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix);
+
         sgNode._renderCmd.rendering = function() {
             program.use();
-            gl.drawArrays(gl.TRIANGLE_FAN, 0, n);
+            gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+            gl.drawArrays(gl.TRIANGLES, 0, n);
             cc.incrementGLDraws(1);
         };
     },
 
-    initVertexBuffers : function(gl, program) {
+    initVertexBuffers : function(gl, vertexBuffer, program) {
         var vertices = new Float32Array([
-            -0.5, 0.5,
-            -0.5, -0.5,
-            0.5, 0.5,
-            0.5, -0.5
+                0, 0.5,
+                -0.5, -0.5,
+                0.5, -0.5
             ]);
-        var n = 4; // The number of vertices
-
-        // create a buffer object
-        var vertexBuffer = gl.createBuffer();
-        if(!vertexBuffer) {
-            cc.error('Failed to create the buffer object');
-            return -1;
-        }
+        var n = 3; // The number of vertices
 
         // Bind the buffer object to target
         gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);

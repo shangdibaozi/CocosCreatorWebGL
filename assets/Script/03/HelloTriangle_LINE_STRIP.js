@@ -12,6 +12,7 @@ void main() {
     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }
 `;
+
 cc.Class({
     extends: cc.Component,
 
@@ -34,34 +35,28 @@ cc.Class({
         program.link();
         sgNode.setShaderProgram(program);
 
-        var n = this.initVertexBuffers(gl, program._programObj);
+        // Create a buffer object
+        var vertexBuffer = gl.createBuffer();
+        var n = this.initVertexBuffers(gl, vertexBuffer, program._programObj);
         if(n < 0) {
-            cc.error('Failed to set the position of the vertices');
+            cc.error('Failed to set the positions of the vertices');
             return;
         }
-
         sgNode._renderCmd.rendering = function() {
             program.use();
-            gl.drawArrays(gl.TRIANGLE_FAN, 0, n);
+            gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+            gl.drawArrays(gl.LINE_STRIP, 0, n);
             cc.incrementGLDraws(1);
         };
     },
 
-    initVertexBuffers : function(gl, program) {
+    initVertexBuffers : function(gl, vertexBuffer, program) {
         var vertices = new Float32Array([
-            -0.5, 0.5,
-            -0.5, -0.5,
-            0.5, 0.5,
-            0.5, -0.5
+                0, 0.5,
+                -0.5, -0.5,
+                0.5, -0.5
             ]);
-        var n = 4; // The number of vertices
-
-        // create a buffer object
-        var vertexBuffer = gl.createBuffer();
-        if(!vertexBuffer) {
-            cc.error('Failed to create the buffer object');
-            return -1;
-        }
+        var n = 3; // The number of vertices
 
         // Bind the buffer object to target
         gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
