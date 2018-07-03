@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"epa",
+				"elapsed"
+			],
+			[
 				"_render",
 				"_renderCmd"
 			],
@@ -1177,6 +1181,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"u_xformMatrix",
+			"modelMatrix",
+			"u_ModelMatrix",
 			"Vector4",
 			"loop",
 			"_vertexDataUI32",
@@ -1301,10 +1308,7 @@
 			"owner",
 			"scrollViewMask",
 			"gap",
-			"30",
-			"PI",
-			"R *",
-			"R"
+			"30"
 		],
 		"highlight": false,
 		"in_selection": false,
