@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"curr",
+				"currentAngle"
+			],
+			[
 				"epa",
 				"elapsed"
 			],
@@ -154,10 +158,6 @@
 			[
 				"bg",
 				"bg_im"
-			],
-			[
-				"curr",
-				"current_id"
 			],
 			[
 				"sto",
@@ -1035,6 +1035,15 @@
 	},
 	"file_history":
 	[
+		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLStateCache.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/fun/Circle.js",
+		"/D/CocosCreator/resources/engine/cocos2d/actions/CCActionInterval.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/fun/DissolveEffect.js",
+		"/H/cocos creator shader/ShaderDemos-master/assets/resources/amazingstar.glsl",
+		"/E/github/CocosCreatorWebGL/assets/Script/04/HelloPoint.js",
+		"/C/Users/95/Desktop/HelloPoint.js",
+		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLProgram.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/event-manager/CCEventManager.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirector.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirectorWebGL.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
@@ -1050,7 +1059,6 @@
 		"/E/github/CocosCreatorWebGL/assets/Script/lib/cuon-matrix.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloQuad.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloQuad_FAN.js",
-		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLProgram.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/02/HelloPoint2.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/02/HelloPoint1.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/02/HelloPoint.js",
@@ -1077,10 +1085,8 @@
 		"/D/CocosCreator/resources/engine/cocos2d/core/graphics/graphics-webgl-cmd.js",
 		"/H/cocos/CocosCreator-master/Shader/assets/Script/UI/EffectManager.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/platform/CCMacro.js",
-		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLStateCache.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/sprites/CCSpriteFrame.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/value-types/CCTypesWebGL.js",
-		"/D/CocosCreator/resources/engine/cocos2d/actions/CCActionInterval.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/value-types/CCRect.js",
 		"/F/teamgame/explodingkitten/client/ExplodingKittenClient/assets/Script/UIComponent/CardPlaceUI.js",
 		"/F/teamgame/explodingkitten/client/ExplodingKittenClient/assets/Script/UIComponent/CardItemUI.js",
@@ -1096,7 +1102,6 @@
 		"/F/teamgame/ExplodingKitten/client/ExplodingKittenClient/assets/Script/Avatar/iEntityCommon.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/components/CCScrollView.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/event-manager/CCEvent.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/event-manager/CCEventManager.js",
 		"/F/teamgame/ExplodingKitten/client/ExplodingKittenClient/assets/Script/UIComponent/CardUI.js",
 		"/F/teamgame/ExplodingKitten/client/ExplodingKittenClient/assets/Script/Plugin/kbengine.js",
 		"/D/CocosCreator/resources/engine/external/socketio/socket.io.js",
@@ -1157,12 +1162,7 @@
 		"/C/Users/95/Downloads/lua-5.1.4/etc/Makefile",
 		"/D/Program Files (x86)/Steam/steamapps/common/dont_starve/mods/workshop-574636989/modinfo.lua",
 		"/E/jikexueyuan/games/kongfu/doc/GFXZ_Menu/Cocos2d-x项目实战开发-功夫小子之过渡场景和开始菜单的实现-上线资源包/源码/Classes/test.cpp",
-		"/E/jikexueyuan/games/kongfu/doc/源码/Classes/GameMap.h",
-		"/H/learnopengl/Simple OpenGL Image Library/src/test_SOIL.cpp",
-		"/E/cocos2d-x-3.14.1/plugin/samples/HelloPlugins/proj.android/build_native.py",
-		"/H/game-programmer/0.编程学前班/scratch/Scratch2StarterProjects/Games/Pong Starter.sb2",
-		"/E/cocos/Rocker/frameworks/cocos2d-x/cocos/scripting/js-bindings/script/jsb_prepare.js",
-		"/E/code/python/gmlog/log.js"
+		"/E/jikexueyuan/games/kongfu/doc/源码/Classes/GameMap.h"
 	],
 	"find":
 	{
@@ -1181,6 +1181,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"0.5",
+			"5",
+			"shatter",
+			"height",
+			"glUniform1fv",
+			"CC_Texture0",
+			"resolution",
+			"5",
+			"initVertexBuffers",
+			"cc.macro.VERTEX_ATTRIB_POSITION",
+			"wnode",
+			"a_texCoord",
+			"a_Position",
+			"mainLoop",
 			"u_xformMatrix",
 			"modelMatrix",
 			"u_ModelMatrix",
@@ -1294,21 +1308,7 @@
 			"firt_pos",
 			"emptyCardLayer",
 			"addChild",
-			"this.cardNum",
-			"singleBattleGameStart",
-			"scrollView",
-			"refreshLeftCardPosition",
-			"addCard2Content",
-			"onPickUpCard",
-			"addCard2Content",
-			"updateScrollView",
-			"scrollView",
-			"cardDropDown",
-			"scrollEvent",
-			"owner",
-			"scrollViewMask",
-			"gap",
-			"30"
+			"this.cardNum"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1351,7 +1351,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.67203042715,
 			1.0
 		],
 		"rows":
@@ -1393,6 +1393,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"action",
+				"engine\\cocos2d\\actions\\CCActionInterval.js"
+			],
+			[
+				"ccdire",
+				"engine\\cocos2d\\core\\CCDirector.js"
+			],
 			[
 				"dire",
 				"engine\\cocos2d\\core\\CCDirectorWebGL.js"
@@ -1436,10 +1444,6 @@
 			[
 				"renderweb",
 				"engine\\cocos2d\\core\\renderer\\RendererWebGL.js"
-			],
-			[
-				"ccdire",
-				"engine\\cocos2d\\core\\CCDirector.js"
 			],
 			[
 				"ccglp",
