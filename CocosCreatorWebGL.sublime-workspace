@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"disTo",
+				"disToCenter"
+			],
+			[
+				"disToEd",
+				"disToEdgeWithRandom"
+			],
+			[
+				"u_",
+				"u_Sampler1"
+			],
+			[
+				"imgTe",
+				"imgTexture0"
+			],
+			[
+				"u_S",
+				"u_Sampler0"
+			],
+			[
+				"texutre",
+				"texture0"
+			],
+			[
+				"FLO",
+				"Float32Array"
+			],
+			[
+				"a_Po",
+				"a_Position"
+			],
+			[
 				"curr",
 				"currentAngle"
 			],
@@ -1035,9 +1067,19 @@
 	},
 	"file_history":
 	[
-		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLStateCache.js",
-		"/E/github/CocosCreatorWebGL/assets/Script/fun/Circle.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/actions/CCActionInterval.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad_Clamp_Mirror.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiAttributeColor.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiAttributeSize.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiAttributeSize_Interleaved.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiTexture.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad_Repeat.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/textures/CCTexture2D.js",
+		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLStateCache.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/fun/Circle.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/fun/DissolveEffect.js",
 		"/H/cocos creator shader/ShaderDemos-master/assets/resources/amazingstar.glsl",
 		"/E/github/CocosCreatorWebGL/assets/Script/04/HelloPoint.js",
@@ -1046,7 +1088,6 @@
 		"/D/CocosCreator/resources/engine/cocos2d/core/event-manager/CCEventManager.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirector.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/CCDirectorWebGL.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle_LINE_LOOP.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/03/HelloTriangle_LINE_STRIP.js",
@@ -1071,7 +1112,6 @@
 		"/D/CocosCreator/resources/engine/cocos2d/core/components/CCSGComponent.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeBaseRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNode.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/clipping-nodes/CCClippingNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/gulp/tasks/test.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shape-nodes/CCDrawNodeWebGLRenderCmd.js",
@@ -1154,15 +1194,7 @@
 		"/C/Users/95/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python/Main.sublime-menu",
 		"/H/Python/mooc",
 		"/D/饥荒/steamcmd/steamapps/common/Don't Starve Together Dedicated Server/mods/modsettings.lua",
-		"/C/Users/95/Documents/Klei/DoNotStarveTogether/Cluster_1/Master/modoverrides.lua",
-		"/C/Users/95/Documents/Klei/DoNotStarveTogether/Cluster_2/Master/modoverrides.lua",
-		"/C/Users/95/Documents/Klei/DoNotStarveTogether/Cluster_2/Master/leveldataoverride.lua",
-		"/D/饥荒/steamcmd/steamapps/common/Don't Starve Together Dedicated Server/mods/dedicated_server_mods_setup.lua",
-		"/C/Users/95/Downloads/lua-5.1.4/src/Makefile",
-		"/C/Users/95/Downloads/lua-5.1.4/etc/Makefile",
-		"/D/Program Files (x86)/Steam/steamapps/common/dont_starve/mods/workshop-574636989/modinfo.lua",
-		"/E/jikexueyuan/games/kongfu/doc/GFXZ_Menu/Cocos2d-x项目实战开发-功夫小子之过渡场景和开始菜单的实现-上线资源包/源码/Classes/test.cpp",
-		"/E/jikexueyuan/games/kongfu/doc/源码/Classes/GameMap.h"
+		"/C/Users/95/Documents/Klei/DoNotStarveTogether/Cluster_1/Master/modoverrides.lua"
 	],
 	"find":
 	{
@@ -1170,7 +1202,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 115.0,
+		"height": 124.0,
 		"where_history":
 		[
 			""
@@ -1181,6 +1213,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_components",
+			"pTarget",
+			"isDone",
+			"puremvcDemo",
+			"puremvc",
+			"this.fish.getTexture()",
+			"this._sgNode",
+			"_ccsg.Sprite",
+			"setTextureRect",
+			"u_Sampler0",
+			"_glID",
+			"_setImage",
+			"this._image",
+			"_setImage",
+			"texImage2D",
+			"texture1",
+			"0",
+			"vertexBuffer",
+			"a_PointSize",
+			"a_POintSize",
+			"vertexBGuffer",
+			"FISZE",
 			"0.5",
 			"5",
 			"shatter",
@@ -1286,29 +1340,7 @@
 			"cardLayer",
 			"this.cardLayer",
 			"cardLayer",
-			"addChild",
-			"updateCardController",
-			"Pile",
-			"pointInPile",
-			"addCard2Self",
-			"addCard2Content",
-			"CARD_TAG_IN_PILE",
-			"dropDown",
-			"cardDropDown",
-			"CardItemUI",
-			"cardLayer",
-			"initCards",
-			"cardInTable",
-			"searchSelectCard",
-			"cardInTable",
-			"updateCardController",
-			"\t\tthis.updateCardController();\n",
-			"updateScrollView",
-			"selfCards",
-			"firt_pos",
-			"emptyCardLayer",
-			"addChild",
-			"this.cardNum"
+			"addChild"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1329,7 +1361,7 @@
 	},
 	"input":
 	{
-		"height": 41.0
+		"height": 44.0
 	},
 	"layout":
 	{
@@ -1340,18 +1372,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.67203042715,
 			1.0
 		],
 		"rows":
@@ -1394,6 +1419,38 @@
 		"selected_items":
 		[
 			[
+				"base-no",
+				"engine\\cocos2d\\core\\utils\\base-node.js"
+			],
+			[
+				"ccnod",
+				"engine\\cocos2d\\core\\CCNode.js"
+			],
+			[
+				"CCClass",
+				"engine\\cocos2d\\core\\platform\\CCClass.js"
+			],
+			[
+				"ccla",
+				"engine\\cocos2d\\core\\components\\CCLabel.js"
+			],
+			[
+				"ccspritebat",
+				"engine\\cocos2d\\core\\sprites\\CCSpriteBatchNode.js"
+			],
+			[
+				"actioninter",
+				"engine\\cocos2d\\actions\\CCActionInterval.js"
+			],
+			[
+				"ccsprite",
+				"engine\\cocos2d\\core\\components\\CCSprite.js"
+			],
+			[
+				"cctexture",
+				"engine\\cocos2d\\core\\textures\\CCTexture2D.js"
+			],
+			[
 				"action",
 				"engine\\cocos2d\\actions\\CCActionInterval.js"
 			],
@@ -1416,10 +1473,6 @@
 			[
 				"renderw",
 				"engine\\cocos2d\\core\\renderer\\RendererWebGL.js"
-			],
-			[
-				"ccsprite",
-				"engine\\cocos2d\\core\\components\\CCSprite.js"
 			],
 			[
 				"Atest",
@@ -1564,10 +1617,6 @@
 			[
 				"ccsg",
 				"engine\\cocos2d\\core\\base-nodes\\CCSGNode.js"
-			],
-			[
-				"ccnod",
-				"engine\\cocos2d\\core\\CCNode.js"
 			],
 			[
 				"ccvec",
