@@ -68,8 +68,8 @@ cc.Class({
     onLoad : function() {
         this.texture = this.node.getComponent(cc.Sprite).spriteFrame.getTexture();
 
-        this.m_gridSideLen = 3.0;
-        this.m_initalFrageScale = 5.0;
+        this.m_gridSideLen = 3.0; // 碎块大小
+        this.m_initalFrageScale = 5.0; // 初始碎块缩放倍率
         this.m_fragBatchNode = null;
         this.m_grid = [];
 
@@ -95,9 +95,7 @@ cc.Class({
         var nCol = contentSize.width / this.m_gridSideLen << 0;
         var fragCount = nRow * nCol;
 
-
-
-        this.m_fragBatchNode = new cc.SpriteBatchNode(this.texture, fragCount);
+        this.m_fragBatchNode = new cc.SpriteBatchNode(this.texture);
         this.node._sgNode.addChild(this.m_fragBatchNode);
         this.m_fragBatchNode.setVisible(false);
 
@@ -124,7 +122,9 @@ cc.Class({
         for(var i = 0; i < nRow; i++) {
             for(var j = 0; j < nCol; j++) {
                 var frag = this.m_grid[i][j];
-                var x = j * this.m_gridSideLen + halfGridSideLen;
+                // 计算frag的坐标
+                // frag要现实的内容是texture，纹理坐标原点在左下角
+                var x = j * this.m_gridSideLen + halfGridSideLen ;
                 var y = contentSize.height - (i * this.m_gridSideLen + halfGridSideLen);
                 frag.setTextureRect(cc.rect(
                     x - halfGridSideLen, 
@@ -148,6 +148,7 @@ cc.Class({
         for(var i = 0; i < nRow; i++) {
             for(var j = 0; j < nCol; j++) {
                 var frag = this.m_grid[i][j];
+                // 跳过不可见的方块
                 if(frag.getOpacity() === 0 || frag.getScale() === 0) {
                     frag.setVisible(false);
                     continue;

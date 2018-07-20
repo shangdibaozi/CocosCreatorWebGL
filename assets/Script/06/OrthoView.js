@@ -2,10 +2,10 @@ var VSHADER_SOURCE =
 `
 attribute vec4 a_Position;
 attribute vec4 a_Color;
-uniform mat4 u_ViewMatrix;
+uniform mat4 u_ProjMatrix;
 varying vec4 v_Color;
 void main() {
-    gl_Position = u_ViewMatrix * a_Position;
+    gl_Position = u_ProjMatrix * a_Position;
     v_Color = a_Color;
 }
 `;
@@ -25,11 +25,15 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        
+        nearLabel : cc.Label,
+        farLabel : cc.Label
     },
 
     onLoad : function() {
+        this.near = 0.0;
+        this.far = 0.5;
         this.initProgram();
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
     initProgram : function() {
@@ -47,19 +51,22 @@ cc.Class({
 
         var a_Position = gl.getAttribLocation(program._programObj, 'a_Position');
         var a_Color = gl.getAttribLocation(program._programObj, 'a_Color');
-        var u_ViewMatrix = gl.getUniformLocation(program._programObj, 'u_ViewMatrix');
+        var u_ProjMatrix = gl.getUniformLocation(program._programObj, 'u_ProjMatrix');
 
-        var viewMatrix = new Matrix4();
-        // viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0);
-        viewMatrix.setLookAt(0.0, 0.0, 0.010, 0, 0, -1, 0, 1, 0);
-        gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements);
+        var projMatrix = new Matrix4();
+
 
         var vertexColorBuffer = gl.createBuffer();
         var n = this.initVertexBuffers(gl, vertexColorBuffer, a_Position, a_Color);
 
 
+        var self = this;
         sgNode._renderCmd.rendering = function() {
             program.use();
+            self.nearLabel.string = 'near: ' + Math.round(self.near * 100) / 100;
+            self.farLabel.string = 'far: ' + Math.round(self.far * 100) / 100;
+            projMatrix.setOrtho(-1.0, 1.0, -1.0, 1.0, self.near, self.far);
+            gl.uniformMatrix4fv(u_ProjMatrix, false, projMatrix.elements);
 
             gl.bindBuffer(gl.ARRAY_BUFFER, vertexColorBuffer);
             gl.vertexAttribPointer(a_Position, 3, gl.FLOAT, false, Float32Array.BYTES_PER_ELEMENT * 6, 0);
@@ -84,8 +91,8 @@ cc.Class({
              0.0, -0.6, -0.2, 1.0, 1.0, 0.4,
 
              0.0,  0.3,  0.0, 0.4, 0.4, 1.0,
-            -1.6, -0.4,  0.0, 0.4, 0.4, 1.0,
-             1.6, -0.4,  0.0, 1.0, 0.4, 0.4
+            -0.6, -0.4,  0.0, 0.4, 0.4, 1.0,
+             0.6, -0.4,  0.0, 1.0, 0.4, 0.4
         ]);
         var n = 9;
 
@@ -99,5 +106,22 @@ cc.Class({
         gl.enableVertexAttribArray(a_Color);
 
         return n;
+    },
+
+    onKeyDown : function(event) {
+        switch(event.keyCode) {
+            case cc.KEY.a:
+                this.near += 0.01;
+                break;
+            case cc.KEY.d:
+                this.near -= 0.01;
+                break;
+            case cc.KEY.w:
+                this.far += 0.01;
+                break;
+            case cc.KEY.s:
+                this.far -= 0.01;
+                break;
+        }
     }
 });

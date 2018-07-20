@@ -29,7 +29,11 @@ cc.Class({
     },
 
     onLoad : function() {
+        this.eyeX = 0.20;
+        this.eyeY = 0.25;
+        this.eyeZ = 0.25;
         this.initProgram();
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
     initProgram : function() {
@@ -50,16 +54,19 @@ cc.Class({
         var u_ViewMatrix = gl.getUniformLocation(program._programObj, 'u_ViewMatrix');
 
         var viewMatrix = new Matrix4();
-        // viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0);
-        viewMatrix.setLookAt(0.0, 0.0, 0.010, 0, 0, -1, 0, 1, 0);
-        gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements);
+        viewMatrix.setLookAt(0.20, 0.25, 0.25, 0, 0, 0, 0, 1, 0);
+
 
         var vertexColorBuffer = gl.createBuffer();
         var n = this.initVertexBuffers(gl, vertexColorBuffer, a_Position, a_Color);
 
 
+        var self = this;
         sgNode._renderCmd.rendering = function() {
             program.use();
+
+            viewMatrix.setLookAt(self.eyeX, self.eyeY, self.eyeZ, 0, 0, 0, 0, 1, 0);
+            gl.uniformMatrix4fv(u_ViewMatrix, false, viewMatrix.elements);
 
             gl.bindBuffer(gl.ARRAY_BUFFER, vertexColorBuffer);
             gl.vertexAttribPointer(a_Position, 3, gl.FLOAT, false, Float32Array.BYTES_PER_ELEMENT * 6, 0);
@@ -84,8 +91,8 @@ cc.Class({
              0.0, -0.6, -0.2, 1.0, 1.0, 0.4,
 
              0.0,  0.3,  0.0, 0.4, 0.4, 1.0,
-            -1.6, -0.4,  0.0, 0.4, 0.4, 1.0,
-             1.6, -0.4,  0.0, 1.0, 0.4, 0.4
+            -0.6, -0.4,  0.0, 0.4, 0.4, 1.0,
+             0.6, -0.4,  0.0, 1.0, 0.4, 0.4
         ]);
         var n = 9;
 
@@ -99,5 +106,28 @@ cc.Class({
         gl.enableVertexAttribArray(a_Color);
 
         return n;
+    },
+
+    onKeyDown : function(event) {
+        switch(event.keyCode) {
+            case cc.KEY.a:
+                this.eyeX += 0.01;
+                break;
+            case cc.KEY.d:
+                this.eyeX -= 0.01;
+                break;
+            case cc.KEY.w:
+                this.eyeY -= 0.01;
+                break;
+            case cc.KEY.s:
+                this.eyeY += 0.01;
+                break;
+            case cc.KEY.z:
+                this.eyeZ += 0.01;
+                break;
+            case cc.KEY.x:
+                this.eyeZ -= 0.01;
+                break;
+        }
     }
 });

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"light",
+				"lightAni"
+			],
+			[
+				"ELEME",
+				"BYTES_PER_ELEMENT"
+			],
+			[
 				"disTo",
 				"disToCenter"
 			],
@@ -1067,6 +1075,14 @@
 	},
 	"file_history":
 	[
+		"/D/CocosCreator/resources/engine/cocos2d/core/sprites/CCSGSprite.js",
+		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCShaderCache.js",
+		"/D/CocosCreator/resources/engine/cocos2d/core/sprites/CCScale9SpriteWebGLRenderCmd.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad_Repeat.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/fun/Circle.js",
+		"/D/CocosCreator/resources/engine/gulp/tasks/test.js",
+		"/E/github/BlockParkour/assets/scripts/GameEnd.js",
+		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/actions/CCActionInterval.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad_Clamp_Mirror.js",
@@ -1074,12 +1090,9 @@
 		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiAttributeSize.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiAttributeSize_Interleaved.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/05/MultiTexture.js",
-		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad_Repeat.js",
-		"/E/github/CocosCreatorWebGL/assets/Script/05/TexturedQuad.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/textures/CCTexture2D.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCGLStateCache.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererWebGL.js",
-		"/E/github/CocosCreatorWebGL/assets/Script/fun/Circle.js",
 		"/E/github/CocosCreatorWebGL/assets/Script/fun/DissolveEffect.js",
 		"/H/cocos creator shader/ShaderDemos-master/assets/resources/amazingstar.glsl",
 		"/E/github/CocosCreatorWebGL/assets/Script/04/HelloPoint.js",
@@ -1107,13 +1120,11 @@
 		"/D/CocosCreator/resources/engine/cocos2d/core/renderer/RendererCanvas.js",
 		"/D/CocosCreator/resources/engine/gulp/tasks/engine.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shape-nodes/CCDrawNode.js",
-		"/D/CocosCreator/resources/engine/cocos2d/core/sprites/CCScale9SpriteWebGLRenderCmd.js",
 		"/H/cocos/CocosCreator-master/Shader/assets/Script/EffectForShaderToy.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/components/CCSGComponent.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNodeBaseRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/base-nodes/CCSGNode.js",
 		"/D/CocosCreator/resources/engine/cocos2d/clipping-nodes/CCClippingNodeWebGLRenderCmd.js",
-		"/D/CocosCreator/resources/engine/gulp/tasks/test.js",
 		"/D/CocosCreator/resources/engine/cocos2d/shape-nodes/CCDrawNodeWebGLRenderCmd.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/components/CCSprite.js",
 		"/D/CocosCreator/resources/engine/bin/cocos2d-js-for-preview.js",
@@ -1149,7 +1160,6 @@
 		"/H/serverEngine/KBEngine1.1.5/BallGame/Server/kbengine-1.1.5/balls_server_assets/res/server/kbengine.xml",
 		"/H/cocos/CocosCreator-master/Shader/assets/resources/Effect93.fs.glsl",
 		"/F/teamgame/racergame/assets/Script/DrawNode.js",
-		"/D/CocosCreator/resources/engine/cocos2d/shaders/CCShaderCache.js",
 		"/D/CocosCreator/resources/engine/cocos2d/core/value-types/CCPointExtension.js",
 		"/F/teamgame/racergame/assets/Script/Striaght.js",
 		"/H/cocos/myShaderStudy/shader.sublime-project",
@@ -1192,9 +1202,7 @@
 		"/C/Users/95/AppData/Roaming/Sublime Text 3/Packages/User/makefile.sublime-build",
 		"/C/Users/95/AppData/Roaming/Sublime Text 3/Packages/User/Makefile.sublime-settings",
 		"/C/Users/95/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python/Main.sublime-menu",
-		"/H/Python/mooc",
-		"/D/饥荒/steamcmd/steamapps/common/Don't Starve Together Dedicated Server/mods/modsettings.lua",
-		"/C/Users/95/Documents/Klei/DoNotStarveTogether/Cluster_1/Master/modoverrides.lua"
+		"/H/Python/mooc"
 	],
 	"find":
 	{
@@ -1213,6 +1221,60 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"0.5",
+			"1.0",
+			"tiledQuadGenerator",
+			"SpriteType",
+			"Tiled",
+			"tiled",
+			"tile",
+			"REPEAT",
+			"setUniformLocationWith4f",
+			"v_animLight",
+			"v_LightColor",
+			"u_lightTexture",
+			"texture1",
+			"_rotated",
+			"colour",
+			"i",
+			"t",
+			"e.",
+			"),",
+			"u_FogColor",
+			"pMatrix",
+			",",
+			"this._shaderProgram",
+			"gray",
+			"pop()",
+			"{}]",
+			"[fun",
+			".v",
+			".f",
+			"\\n",
+			"\"",
+			"\"use strict\"",
+			"\\n",
+			"\"",
+			"cc._RF",
+			".frag",
+			"frag",
+			"GLProgram",
+			"{\n",
+			"GLProgram",
+			"u_ViewMatrix",
+			"eyeY",
+			"eyeX",
+			"u_ViewMatrix",
+			" << 0",
+			"self",
+			"this",
+			"viewMatrix",
+			"u_ProjMatrix",
+			"u_ViewMatrix",
+			"u_ModelViewMatrix",
+			"_vertices",
+			"u_ViewMatrix",
+			"program",
 			"_components",
 			"pTarget",
 			"isDone",
@@ -1286,66 +1348,12 @@
 			"this.node",
 			"pushRenderCommand",
 			"_beforeVisitCmd",
-			"_onBeforeVisit",
-			"CustomRenderCmd",
-			"_renderCmd",
-			"CustomRenderCmd",
-			"_renderCmds",
-			"_afterDrawStencilCmd",
-			"_beforeVisitCmd",
-			"CustomRenderCmd",
-			"rendering",
-			"CustomRenderCmd",
-			"rendering",
-			"WebGLRenderCmd",
-			"pushRenderCommand",
-			"_createRenderCmd",
-			"_renderCmd",
-			"pushRenderCommand",
-			"mainLoop",
-			"_renderContext",
-			"DrawingPrimitiveWebGL",
-			"bufferData",
-			"g_NumberOfDraws",
-			"Draw call",
-			"_trianglesWebBuffer",
-			"createBuffer",
-			"STATIC_DRAW",
-			"new cc.BlendFunc(cc.macro.SRC_ALPHA, cc.macro.ONE_MINUS_SRC_ALPHA);",
-			"node",
-			"_blendFunc",
-			"gl._glContext",
-			"gl",
-			"this._program",
-			"a_Position",
-			"VERTEX_ATTRIB_TEX_COORDS",
-			"ATTRIBUTE_NAME_TEX_COORD",
-			"VERTEX_ATTRIB_TEX_COORDS",
-			"VERTEX_ATTRIB_COORDS",
-			"ATTRIBUTE_NAME_POSITION",
-			"VERTEX_ATTRIB_POSITION",
-			"a_position",
-			"-323",
-			"x",
-			"bufferData",
-			"_programObj",
-			"isSelectCard",
-			"this.cardNum",
-			"child",
-			"removeSelfCard",
-			"refreshLeftCardPosition",
-			"refreshCard",
-			"_olderZIndex",
-			"cardPile",
-			"cardLayer",
-			"this.cardLayer",
-			"cardLayer",
-			"addChild"
+			"_onBeforeVisit"
 		],
-		"highlight": false,
+		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -1418,6 +1426,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ccsprite9",
+				"engine\\cocos2d\\core\\sprites\\CCScale9Sprite.js"
+			],
+			[
+				"sgsprite",
+				"engine\\cocos2d\\core\\sprites\\CCSGSprite.js"
+			],
+			[
+				"ccspritefra",
+				"engine\\cocos2d\\core\\sprites\\CCSpriteFrame.js"
+			],
+			[
+				"wavel",
+				"CocosCreatorWebGL\\assets\\Script\\fun\\WaveLight.js"
+			],
+			[
+				"Test",
+				"CocosCreatorWebGL\\assets\\Script\\fun\\Test.js"
+			],
+			[
+				"etest",
+				"engine\\gulp\\tasks\\test.js"
+			],
+			[
+				"textureca",
+				"engine\\cocos2d\\core\\textures\\CCTextureCache.js"
+			],
 			[
 				"base-no",
 				"engine\\cocos2d\\core\\utils\\base-node.js"
@@ -1822,7 +1858,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211.0,
+	"side_bar_width": 287.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
